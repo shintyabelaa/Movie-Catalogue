@@ -1,3 +1,8 @@
+<<<<<<< HEAD
+=======
+/* eslint-disable no-alert */
+/* eslint-disable no-empty-function */
+>>>>>>> 301a9359168623ced65653f12cec80ff1ee48f86
 import NotificationHelper from './notification-helper';
 import CONFIG from '../globals/config';
 
@@ -7,7 +12,11 @@ const FooterToolsInitiator = {
     this._unsubscribeButton = unsubscribeButton;
     this._registrationServiceWorker = null;
 
+<<<<<<< HEAD
     if ('serviceWorker' in navigator) {
+=======
+    if ('ServiceWorker' in navigator) {
+>>>>>>> 301a9359168623ced65653f12cec80ff1ee48f86
       this._registrationServiceWorker = await navigator.serviceWorker.getRegistration();
     }
 
@@ -78,7 +87,10 @@ const FooterToolsInitiator = {
       await this._sendPostToServer(CONFIG.PUSH_MSG_UNSUBSCRIBE_URL, pushSubscription);
 
       const isHasBeenUnsubscribed = await pushSubscription.unsubscribe();
+<<<<<<< HEAD
       console.log('isHasBeenUnsubscribed: ', isHasBeenUnsubscribed);
+=======
+>>>>>>> 301a9359168623ced65653f12cec80ff1ee48f86
       if (!isHasBeenUnsubscribed) {
         console.log('Failed to unsubscribe push message');
         await this._sendPostToServer(CONFIG.PUSH_MSG_SUBSCRIBE_URL, pushSubscription);

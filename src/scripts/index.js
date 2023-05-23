@@ -3,7 +3,11 @@ import '../styles/style.css';
 import '../styles/responsive.css';
 import App from './views/app';
 import swRegister from './utils/sw-register';
+<<<<<<< HEAD
 import WebSocketInitiator from './utils/websocket-initiator';
+=======
+import WebSocketInitiator from './utils/websocket-initiatior';
+>>>>>>> 301a9359168623ced65653f12cec80ff1ee48f86
 import FooterToolsInitiator from './utils/footer-tools-initiator';
 import CONFIG from './globals/config';
 

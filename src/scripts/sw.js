@@ -1,3 +1,7 @@
+<<<<<<< HEAD
+=======
+/* eslint-disable no-unused-vars */
+>>>>>>> 301a9359168623ced65653f12cec80ff1ee48f86
 import { precacheAndRoute } from 'workbox-precaching';
 
 // Do precaching
@@ -10,6 +14,7 @@ self.addEventListener('install', () => {
 
 self.addEventListener('push', (event) => {
   console.log('Service Worker: Pushed');
+<<<<<<< HEAD
 
   const dataJson = event.data.json();
   const notification = {
@@ -22,16 +27,24 @@ self.addEventListener('push', (event) => {
   };
 
   event.waitUntil(self.registration.showNotification(notification.title, notification.options));
+=======
+>>>>>>> 301a9359168623ced65653f12cec80ff1ee48f86
 });
 
 self.addEventListener('notificationclick', (event) => {
   const clickedNotification = event.notification;
   clickedNotification.close();
+<<<<<<< HEAD
 
+=======
+>>>>>>> 301a9359168623ced65653f12cec80ff1ee48f86
   const chainPromise = async () => {
     console.log('Notification has been clicked');
     await self.clients.openWindow('https://www.dicoding.com/');
   };
+<<<<<<< HEAD
 
+=======
+>>>>>>> 301a9359168623ced65653f12cec80ff1ee48f86
   event.waitUntil(chainPromise());
 });
